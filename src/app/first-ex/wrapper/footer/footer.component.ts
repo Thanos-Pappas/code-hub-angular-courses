@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-footer',
-  templateUrl: './footer.component.html',
+  template: '<h5>Footer Component</h5>',
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent implements OnInit {

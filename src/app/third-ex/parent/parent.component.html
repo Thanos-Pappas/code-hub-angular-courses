@@ -1,0 +1,14 @@
+<h2 class="m-4">Parent Component</h2>
+<div class="container"></div>
+<div class="row">
+  <div class="col-sm-3">
+    <ol *ngIf="allow">
+      <li *ngFor="let item of items">{{ item }}</li>
+    </ol>
+  </div>
+  <div class="col ">
+    <third-ex-child (allowed)="allow = $event"></third-ex-child>
+  </div>
+</div>
+
+
