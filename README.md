@@ -1,4 +1,4 @@
-# code-hub-angular-courses
+#   [Code Hub](https://www.codehub.gr/) - Angular Courses (instructor: [Fanis Prodromou](https://github.com/profanis))
 Simple exercises on the basics of Angular.
 
 ### First exercise
