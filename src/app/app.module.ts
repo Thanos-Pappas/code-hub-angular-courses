@@ -9,8 +9,11 @@ import {WrapperComponent} from './first-ex/wrapper/wrapper.component';
 import {SecondExModule} from './second-ex/second-ex.module';
 import {ParentComponent as ThirdExParentComponent} from './third-ex/parent/parent.component';
 import {ThirdExModule} from './third-ex/third-ex.module';
+import { ExercisesComponent } from './exercises/exercises.component';
 
 const appRoutes: Routes = [
+    { path: '', redirectTo: 'exercises', pathMatch: 'full' },
+    {path: 'exercises', component: ExercisesComponent},
     {path: 'first-exercise', component: WrapperComponent},
     {path: 'second-exercise', component: ParentComponent},
     {path: 'third-exercise', component: ThirdExParentComponent}
@@ -19,7 +22,8 @@ const appRoutes: Routes = [
 
 @NgModule({
     declarations: [
-        AppComponent
+        AppComponent,
+        ExercisesComponent
     ],
     imports: [
         BrowserModule,

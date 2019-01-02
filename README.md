@@ -54,7 +54,7 @@ Having the array people: any[] = [{ "name": "Douglas Pace",
 Create a directive which will highlight a text on hover
 and will have the default state on blur
 
-### exercise 11
+### exercise #11
 * Create a service with a method which will return a typed object with
 properties:
 * date = today
@@ -62,12 +62,12 @@ properties:
 * Consume the service in a component and display the date in format
 yyyyMMdd and the amount in format €amount
 
-### exercise 12
+### exercise #12
 Create a pipe which will get as input a date and transforms it by default
 to “dd/MM/yyyy”. Use a boolean parameter which if true will return the
 time in format “hh:mm:ss” concatenated with the date
 
-### exercise 13
+### exercise #13
 1. Create a service that GETs data from
 https://restcountries.eu/rest/v2/
     Create a model with properties:
