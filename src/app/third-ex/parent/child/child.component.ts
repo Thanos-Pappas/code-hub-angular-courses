@@ -4,7 +4,8 @@ import {Component, OnInit, Output, EventEmitter} from '@angular/core';
     selector: 'third-ex-child',
     template: `
         <h5 class="text-muted">Child Component</h5>
-        <button type="button" class="btn btn-info" (click)="allow()">Allow</button>`
+        <button type="button" class="btn btn-info mr-3" (click)="allow(true)">Allow</button>
+        <button type="button" class="btn btn-warning" (click)="allow(false)">Deny</button>`
 })
 export class ChildComponent implements OnInit {
 
@@ -16,7 +17,7 @@ export class ChildComponent implements OnInit {
 
     @Output() allowed = new EventEmitter<boolean>();
 
-    allow() {
-        this.allowed.emit(true);
+    allow(access:boolean) {
+        this.allowed.emit(access);
     }
 }
