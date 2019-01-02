@@ -79,3 +79,9 @@ https://restcountries.eu/rest/v2/
     * region
 2. Consume the service in a component and display the results in an
 inline template
+
+##Extras
+
+###extra #1
+Use local reference and viewChild() to get access to DOM elements.
+Use ng-content to inject html code to a component.
