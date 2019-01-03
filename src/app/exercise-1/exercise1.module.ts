@@ -13,4 +13,4 @@ import { FooterComponent } from './wrapper/footer/footer.component';
   declarations: [WrapperComponent, HeaderComponent, NavComponent, ContentComponent, FooterComponent],
   exports : [WrapperComponent]
 })
-export class FirstExModule { }
+export class Exercise1Module { }

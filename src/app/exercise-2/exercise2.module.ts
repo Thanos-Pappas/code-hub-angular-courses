@@ -10,4 +10,4 @@ import { ChildComponent } from './parent/child/child.component';
   declarations: [ParentComponent, ChildComponent],
     exports: [ParentComponent]
 })
-export class ThirdExModule { }
+export class Exercise2Module { }
