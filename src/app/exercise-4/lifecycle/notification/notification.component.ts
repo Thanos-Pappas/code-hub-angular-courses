@@ -14,14 +14,14 @@ import {
 })
 export class NotificationComponent implements OnChanges, OnDestroy {
   @Input() notification: boolean;
-  @Output() onChanges = new EventEmitter<boolean>();
-  @Output() onDestroy = new EventEmitter<boolean>();
+  @Output() onChanges = new EventEmitter<void>();
+  @Output() onDestroy = new EventEmitter<void>();
 
   ngOnChanges(changes: SimpleChanges): void {
-    this.onChanges.emit(true);
+    this.onChanges.emit();
   }
 
   ngOnDestroy(): void {
-    this.onDestroy.emit(true);
+    this.onDestroy.emit();
   }
 }
