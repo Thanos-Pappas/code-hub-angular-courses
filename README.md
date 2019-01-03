@@ -1,5 +1,4 @@
 #   [Code Hub](https://www.codehub.gr/) - Angular Courses (instructor: [Fanis Prodromou](https://github.com/profanis))
-Simple exercises on the basics of Angular.
 
 ### exercise #1
 Create a module with all the needed components components to illustrate the following.
@@ -80,8 +79,8 @@ https://restcountries.eu/rest/v2/
 2. Consume the service in a component and display the results in an
 inline template
 
-##Extras
+## Extras
 
-###extra #1
+### extra #1
 Use local reference and viewChild() to get access to DOM elements.
 Use ng-content to inject html code to a component.
