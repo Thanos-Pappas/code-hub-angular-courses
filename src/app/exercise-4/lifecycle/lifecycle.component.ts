@@ -4,10 +4,12 @@ import {
   AfterViewChecked,
   AfterViewInit,
   Component,
-  DoCheck, ElementRef, Input,
+  DoCheck, ElementRef,
   OnChanges,
   OnInit,
-  SimpleChanges, ViewChild
+  SimpleChanges,
+  ViewChild,
+  OnDestroy
 } from '@angular/core';
 
 @Component({
@@ -20,22 +22,25 @@ export class LifecycleComponent implements OnChanges,
     AfterContentInit,
     AfterContentChecked,
     AfterViewInit,
-    AfterViewChecked {
+    AfterViewChecked,
+    OnDestroy {
 
   email: string = "";
   password: string = "";
   notification: boolean = false;
-  logs:  { color: string, phase: string }[] = [];
+  logs: { color: string, phase: string }[] = [];
   @ViewChild('scrollMe') private myScrollContainer: ElementRef;
   lifecycle: { color: string, phase: string }[] = [
-    {"color": "green", "phase": "ngOnInit"},
-    {"color": "red", "phase": "ngAfterContentChecked"},
-    {"color": "fuchsia", "phase": "ngAfterContentInit"},
-    {"color": "blue", "phase": "ngAfterViewChecked"},
-    {"color": "orange", "phase": "ngAfterViewInit"},
-    {"color": "purple", "phase": "ngDoCheck"},
-    {"color": "black", "phase": "ngOnChanges"}
+    {"color": "green", "phase": "ngOnInit"}, // 0
+    {"color": "red", "phase": "ngAfterContentChecked"},// 1
+    {"color": "fuchsia", "phase": "ngAfterContentInit"}, // 2
+    {"color": "blue", "phase": "ngAfterViewChecked"}, // 3
+    {"color": "orange", "phase": "ngAfterViewInit"}, // 4
+    {"color": "purple", "phase": "ngDoCheck"}, // 5
+    {"color": "lime", "phase": "ngOnChanges"}, // 6
+    {"color": "teal", "phase": "ngOnDestroy"} // 7
   ];
+  notificationComponents = [0];
 
   clearForm(): void {
     this.password = "";
@@ -62,7 +67,7 @@ export class LifecycleComponent implements OnChanges,
     this.logs.push(this.lifecycle[1]);
   }
 
-  ngAfterContentInit(): void {
+  ngAfterContentInit(): void { //Only once
     this.logs.push(this.lifecycle[2]);
   }
 
@@ -81,6 +86,17 @@ export class LifecycleComponent implements OnChanges,
 
   ngOnChanges(changes: SimpleChanges): void {
     this.logs.push(this.lifecycle[6]);
+  }
+
+  ngOnDestroy(): void {
+    this.logs.push(this.lifecycle[7]);
+  }
+
+  destroyComponent(): void {
+   this.notificationComponents.splice(0,1);
+  }
+  addComponent(): void {
+    this.notificationComponents.push( this.notificationComponents.length);
   }
 
   scrollToBottom(): void {

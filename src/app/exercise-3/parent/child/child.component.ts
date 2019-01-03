@@ -1,4 +1,4 @@
-import {Component, OnInit, Output, EventEmitter} from '@angular/core';
+import {Component, Output, EventEmitter} from '@angular/core';
 
 @Component({
     selector: 'third-ex-child',
@@ -7,14 +7,7 @@ import {Component, OnInit, Output, EventEmitter} from '@angular/core';
         <button type="button" class="btn btn-info mr-3" (click)="allow(true)">Allow</button>
         <button type="button" class="btn btn-warning" (click)="allow(false)">Deny</button>`
 })
-export class ChildComponent implements OnInit {
-
-    constructor() {
-    }
-
-    ngOnInit() {
-    }
-
+export class ChildComponent {
     @Output() allowed = new EventEmitter<boolean>();
 
     allow(access:boolean) {

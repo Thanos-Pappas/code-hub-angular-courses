@@ -1,14 +1,17 @@
 <div class="container-fluid  ">
   <div class="row mt-5 ml-5">
-    <div class="col-sm-3 mr-3">
+    <div class="col-sm-4 mr-3">
       <h3>Form</h3>
     </div>
     <div class="col-sm-4">
       <h3>Lifecycle Log</h3>
+      <small class="form-text text-muted">Lifecycle hooks in action.<br>
+        Every time the ngAfterViewChecked() is called the scrollbar goes to the bottom.
+      </small>
     </div>
   </div>
   <div class="row m-5">
-    <div class="col-sm-3 mr-5">
+    <div class="col-sm-4 mr-5">
       <form>
         <div class="form-group">
           <label for="exampleInputEmail1">Email address</label>
@@ -23,10 +26,12 @@
                  placeholder="Password" name="password" [(ngModel)]="password">
           <small class="form-text text-muted">Two-way data binding with [(ngModel)]</small>
         </div>
-        <div [style.visibility]="notification ? 'visible' : 'hidden'" class="alert alert-success"
-             role="alert">
-          Form submitted successfully!
-        </div>
+        <app-notification
+            *ngFor="let component of notificationComponents"
+            [notification]="notification"
+            (onChanges)="this.logs.push(this.lifecycle[6]);"
+            (onDestroy)="this.logs.push(this.lifecycle[7]);">
+        </app-notification>
         <div class="row">
           <div class="col mb-1">
             <small class="form-text text-muted float-right">Event data binding with (click)</small>
@@ -35,13 +40,18 @@
         <button type="submit" class="btn btn-primary float-right ml-2" (click)="submitForm()">
           Submit
         </button>
-        <button type="button" class="btn btn-danger float-right" (click)="clearForm()">Clear
+        <button type="button" class="btn btn-warning float-right ml-2" (click)="clearForm()">Clear
         </button>
-
+        <button type="button" class="btn btn-danger float-right ml-2" (click)="destroyComponent()">
+          Destroy Notification
+        </button>
+        <button type="button" class="btn btn-info float-right" (click)="addComponent()">
+          Add Notification
+        </button>
       </form>
     </div>
-    <div class="col-sm-4 border border-dark" style="height:350px; overflow-y: scroll;" #scrollMe>
- <pre [style.color]="log.color" *ngFor="let log of logs; let i = index" class="m-0">{{i + 1}}. Message from {{log.phase}}.</pre>
+    <div class="col-sm-4 border border-dark overflow-auto pt-3 pb-3" style="height:350px;" #scrollMe>
+      <pre [style.color]="log.color" *ngFor="let log of logs; let i = index" class="m-0">{{i + 1}}. Message from {{log.phase}}.</pre>
     </div>
   </div>
 </div>
