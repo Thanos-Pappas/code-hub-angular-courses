@@ -1,5 +1,7 @@
 #   [Code Hub](https://www.codehub.gr/) - Angular Courses (instructor: [Fanis Prodromou](https://github.com/profanis))
 
+## Components
+
 ### exercise #1
 Create a module with all the needed components components to illustrate the following.
 ![Alt text](readme_resources/first-ex.PNG)
@@ -7,7 +9,7 @@ Create a module with all the needed components components to illustrate the foll
 ### exercise #2
 * Create a parent component which has a list of items accessible
 via a method
-* Create a child component which accepts as input the list of the
+* Create a child component fwhich accepts as input the list of the
 items from the parent component and displays the list on screen
 
 ### exercise #3
@@ -19,6 +21,8 @@ Create a component which will display the message:
 *  “Message from OnInit” on the onInit method
 *  “Message from AfterViewInit” on the AfterViewInit method
 
+## Services
+
 ### exercise #5
 Create a service which will return an array of items, and inject this
 service in a component. The results should be shown in the console
@@ -29,6 +33,8 @@ Create another component and inject the same service
 ### exercise #7
 1. Remove the providedIn: 'root' from service and run the app.
 2. Add the service in the providers of each component
+
+## Ng Directives
 
 ### exercise #8
 Having the array ["one", "two", "three", "four", "five", "six", "seven",
@@ -49,9 +55,13 @@ Having the array people: any[] = [{ "name": "Douglas Pace",
 * Display the name of the user in green, if country is HK
 * Display the name of the user in black in any other cases
 
+## Custom Directives
+
 ### exercise #10
 Create a directive which will highlight a text on hover
 and will have the default state on blur
+
+## Built-in Pipes
 
 ### exercise #11
 * Create a service with a method which will return a typed object with
@@ -60,6 +70,8 @@ properties:
 * amount = 1.5
 * Consume the service in a component and display the date in format
 yyyyMMdd and the amount in format €amount
+
+## Custom Pipes
 
 ### exercise #12
 Create a pipe which will get as input a date and transforms it by default
