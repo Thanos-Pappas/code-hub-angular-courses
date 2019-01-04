@@ -78,6 +78,8 @@ Create a pipe which will get as input a date and transforms it by default
 to “dd/MM/yyyy”. Use a boolean parameter which if true will return the
 time in format “hh:mm:ss” concatenated with the date
 
+## HTTP
+
 ### exercise #13
 1. Create a service that GETs data from
 https://restcountries.eu/rest/v2/
