@@ -1,0 +1,23 @@
+<div class="container-fluid p-4">
+    <div class="row ">
+        <div class="col">
+            <h2>Directive Showcase</h2>
+            <hr>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col mb-3">
+            <h4 class="d-inline" appHighlightBackground1>host combined with Renderer</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col mb-3">
+            <h4 class="d-inline" appHighlightBackground2>@HostListener combined with @HostBinder</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col mb-3">
+            <h4 class="d-inline" appHighlightBackground3 [highlight]="'red'" [blur]="'3'">@HostListener combined with @HostBinder and two bindable properties for highlight color and blur level</h4>
+        </div>
+    </div>
+</div>
