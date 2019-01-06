@@ -13,8 +13,8 @@ import {LifecycleComponent} from "./exercise-4/lifecycle/lifecycle.component";
 import {Exercise4Module} from "./exercise-4/exercise-4.module";
 import {Exercise10Module} from "./exercise-10/exercise-10.module";
 import {DirectiveShowcaseComponent} from "./exercise-10/directive-showcase/directive-showcase.component";
-//import {WrapperComponent as ExtrasWrapperComponent} from './extra-1/wrapper/wrapper.component';
-//import {Extra1Module} from './extra-1/extra-1.module';
+import {WrapperComponent as ExtrasWrapperComponent} from './extra-1/wrapper/wrapper.component';
+import {Extra1Module} from './extra-1/extra-1.module';
 
 const appRoutes: Routes = [
     {path: '', redirectTo: 'exercises', pathMatch: 'full'},
@@ -22,7 +22,7 @@ const appRoutes: Routes = [
     {path: 'exercise-1', component: WrapperComponent},
     {path: 'exercise-2', component: ParentComponent},
     {path: 'exercise-3', component: ThirdExParentComponent},
-    //{path: 'extra-1', component: ExtrasWrapperComponent}
+    {path: 'extra-1', component: ExtrasWrapperComponent},
     {path: 'exercise-4', component: LifecycleComponent},
     {path: 'exercise-10', component: DirectiveShowcaseComponent}
 ];
@@ -40,7 +40,7 @@ const appRoutes: Routes = [
         Exercise3Module,
         Exercise4Module,
         Exercise10Module,
-        // Extra1Module,
+         Extra1Module,
         RouterModule.forRoot(
             appRoutes,
             {enableTracing: false} // <-- for debugging purposes only set to true

@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="col-xs-12">
+    <p>Add new Servers or blueprints!</p>
+    <label>Server Name <span class="text-muted">(#serverNameInput selector)</span></label>
+    <!--local reference to input element-->
+    <input type="text" class="form-control" #serverNameInput>
+    <label>Server Content <span class="text-muted">(#serverContentInput selector)</span></label>
+    <!--local reference to input element-->
+    <input type="text" class="form-control" #serverContentInput>
+    <br>
+    <!--pass element reference to method-->
+    <p class="text-muted"> Passing #serverNameInput to buttons' on click methods and using #serverContentInput in .ts file</p>
+    <button
+        class="btn btn-primary mr-2"
+        (click)="onAddServer(serverNameInput)">Add Server</button>
+    <button
+        class="btn btn-primary"
+        (click)="onAddBlueprint(serverNameInput)">Add Server Blueprint</button>
+  </div>
+</div>
