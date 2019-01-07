@@ -29,21 +29,26 @@
     <h2 id="services">Services</h2>
     <hr>
     <h3 id="exercise5">exercise #5</h3>
-    <p>Create a <span class="font-weight-bold">service</span>  which will return an array of items, and inject this
-        service in a component. The results should be shown in the console</p>
-
-    <h3 id="exercise6">exercise #6</h3>
-    <p>Create another component and inject the same  <span class="font-weight-bold">service</span></p>
-
-    <h3 id="exercise7">exercise #7</h3>
+    <p>Create a <span class="font-weight-bold">service</span> which:</p>
     <ol>
-        <li>Remove the providedIn: 'root' from service and run the app.</li>
-        <li>Add the service in the providers of each component</li>
+        <li>return an array of items</li>
+        <li>add an item into the array <span class="font-weight-bold">(emit an event with the new array)</span></li>
     </ol>
+
+    <p>Create another <span class="font-weight-bold">service</span> which:</p>
+    <ol>
+        <li>append its own array with the first array <span class="font-weight-bold">(use spread operator)</span></li>
+        <li>don't use the <span class="font-weight-bold"> providedIn: 'root'</span></li>
+    </ol>
+    <ul>
+        <li>
+            <p> inject the above services in a component, and utilize their functionality</p>
+        </li>
+    </ul>
     <br>
     <h2 id="directives">Ng Directives</h2>
     <hr>
-    <h3 id="exercise8">exercise #8</h3>
+    <h3 id="exercise6">exercise #6</h3>
     <p>Having the array ["one", "two", "three", "four", "five", "six", "seven",
         "eight", "nine", "ten"]</p>
     <ul>
@@ -55,7 +60,7 @@
         <span class="font-weight-bold">  The array should be on a service</span>
     </ul>
 
-    <h3 id="exercise9">exercise #9</h3>
+    <h3 id="exercise7">exercise #7</h3>
     <p>Having the array people: any[] = [ "name": "Douglas Pace", "age": 35, "country": 'MARS'];</p>
     <ul>
         <li>Display the name of the user in blue, if country is UK</li>
@@ -66,13 +71,13 @@
     <br>
     <h2 id="custom-directives">Custom Directives</h2>
     <hr>
-    <h3 id="exercise10">exercise #10</h3>
-    <p>Create a  <span class="font-weight-bold">directive</span> which will highlight a text on hover
+    <h3 id="exercise8">exercise #8</h3>
+    <p>Create a <span class="font-weight-bold">directive</span> which will highlight a text on hover
         and will have the default state on blur</p>
     <br>
     <h2 id="angular-pipes">Built-in Pipes</h2>
     <hr>
-    <h3 id="exercise11">exercise #11</h3>
+    <h3 id="exercise9">exercise #9</h3>
     <ul>
         <li>Create a <span class="font-weight-bold">service</span> with a method which will return a typed object with
             properties:
@@ -86,14 +91,14 @@
     <br>
     <h2 id="custom-pipes">Custom Pipes</h2>
     <hr>
-    <h3 id="exercise12">exercise #12</h3>
+    <h3 id="exercise10">exercise #10</h3>
     <p>Create a <span class="font-weight-bold">pipe</span> which will get as input a date and transforms it by default
         to “dd/MM/yyyy”. Use a boolean parameter which if true will return the
         time in format “hh:mm:ss” concatenated with the date</p>
     <br>
     <h2 id="http">HTTP</h2>
     <hr>
-    <h3 id="exercise13">exercise #13</h3>
+    <h3 id="exercise11">exercise #11</h3>
     <ol>
         <li>Create a <span class="font-weight-bold">service</span> that <span class="font-weight-bold">GETs</span> data from
             https://restcountries.eu/rest/v2/<br>
@@ -116,7 +121,8 @@
     <hr>
     <h3 id="extra1">extra #1</h3>
     <p>
-        Use <span class="font-weight-bold">local reference</span> and <span class="font-weight-bold">viewChild()</span> to get access to DOM elements. Use <span class="font-weight-bold">ng-content</span> to inject html code to a component.
+        Use <span class="font-weight-bold">local reference</span> and <span class="font-weight-bold">viewChild()</span> to get access to DOM elements.
+        Use <span class="font-weight-bold">ng-content</span> to inject html code to a component.
     </p>
 
 </div>

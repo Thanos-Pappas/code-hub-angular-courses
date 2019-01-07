@@ -24,19 +24,21 @@ Create a component which will display the message:
 ## Services
 
 ### exercise #5
-Create a service which will return an array of items, and inject this
-service in a component. The results should be shown in the console
+Create a service which:
 
-### exercise #6
-Create another component and inject the same service
+1. return an array of items
+2. add an item into the array **(emit an event with the new array)**
 
-### exercise #7
-1. Remove the providedIn: 'root' from service and run the app.
-2. Add the service in the providers of each component
+Create another service which:
+
+1. append its own array with the first array **(use spread operator)**
+2. don't use the **providedIn: 'root'**
+
+* inject the above services in a component, and utilize their functionality
 
 ## Ng Directives
 
-### exercise #8
+### exercise #6
 Having the array ["one", "two", "three", "four", "five", "six", "seven",
 "eight", "nine", "ten"]
 
@@ -45,7 +47,7 @@ Having the array ["one", "two", "three", "four", "five", "six", "seven",
 * If the item is the last one, display the label “Is Last”
 The array should be on a service
 
-### exercise #9
+### exercise #7
 Having the array people: any[] = [{ "name": "Douglas Pace",
 "age": 35,
 "country": 'MARS'}];
@@ -57,13 +59,13 @@ Having the array people: any[] = [{ "name": "Douglas Pace",
 
 ## Custom Directives
 
-### exercise #10
+### exercise #8
 Create a directive which will highlight a text on hover
 and will have the default state on blur
 
 ## Built-in Pipes
 
-### exercise #11
+### exercise #9
 * Create a service with a method which will return a typed object with
 properties:
 * date = today
@@ -73,14 +75,14 @@ yyyyMMdd and the amount in format €amount
 
 ## Custom Pipes
 
-### exercise #12
+### exercise #10
 Create a pipe which will get as input a date and transforms it by default
 to “dd/MM/yyyy”. Use a boolean parameter which if true will return the
 time in format “hh:mm:ss” concatenated with the date
 
 ## HTTP
 
-### exercise #13
+### exercise #11
 1. Create a service that GETs data from
 https://restcountries.eu/rest/v2/
     Create a model with properties:
