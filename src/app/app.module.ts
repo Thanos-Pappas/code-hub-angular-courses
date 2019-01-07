@@ -24,7 +24,7 @@ const appRoutes: Routes = [
     {path: 'exercise-3', component: ThirdExParentComponent},
     {path: 'extra-1', component: ExtrasWrapperComponent},
     {path: 'exercise-4', component: LifecycleComponent},
-    {path: 'exercise-10', component: DirectiveShowcaseComponent}
+    {path: 'exercise-8', component: DirectiveShowcaseComponent}
 ];
 
 
