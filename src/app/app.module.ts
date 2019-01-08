@@ -21,6 +21,8 @@ import {UnorderedListComponent} from './exercise-6/unordered-list/unordered-list
 import {Exercise6Module} from './exercise-6/exercise-6.module';
 import {OrderedListComponent} from './exercise-7/ordered-list/ordered-list.component';
 import {Exercise7Module} from './exercise-7/exercise-7.module';
+import {RoutingComponent} from './extras/routing/routing.component';
+import {ExtrasModule} from './extras/extras.module';
 
 const appRoutes: Routes = [
     {path: '', redirectTo: 'exercises', pathMatch: 'full'},
@@ -33,7 +35,8 @@ const appRoutes: Routes = [
     {path: 'exercise-6', component: UnorderedListComponent},
     {path: 'exercise-7', component: OrderedListComponent},
     {path: 'exercise-8', component: DirectiveShowcaseComponent},
-    {path: 'extra-1', component: ExtrasWrapperComponent}
+    {path: 'extras', component: RoutingComponent},
+    {path: 'extras/extra-1', component: ExtrasWrapperComponent}
 ];
 
 
@@ -52,6 +55,7 @@ const appRoutes: Routes = [
         Exercise6Module,
         Exercise7Module,
         Exercise8Module,
+        ExtrasModule,
         Extra1Module,
         RouterModule.forRoot(
             appRoutes,

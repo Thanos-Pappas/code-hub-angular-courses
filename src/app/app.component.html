@@ -41,7 +41,17 @@
                 <a class="nav-link" routerLink="/exercise-8" routerLinkActive="active">Exercise #8</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" routerLink="/extra-1" routerLinkActive="active">Extra #1</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                   aria-expanded="false">
+                    Extras
+                </a>
+                <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+                    <!-- !! routerLinkActiveOptions should be used in order not to mark as active the extras path is a other path which contains it is selected -->
+                    <a class="dropdown-item text-light bg-dark" routerLink="extras" routerLinkActive="active" [routerLinkActiveOptions]="{'exact':true}">Extras</a>
+                    <a class="dropdown-item text-light bg-dark " routerLink="extras/extra-1" routerLinkActive="active">Extra #1</a>
+                </div>
             </li>
         </ul>
     </div>
