@@ -19,6 +19,8 @@ import {ServicesShowcaseComponent} from './exercise-5/services-showcase/services
 import {Exercise5Module} from './exercise-5/exercise-5.module';
 import {UnorderedListComponent} from './exercise-6/unordered-list/unordered-list.component';
 import {Exercise6Module} from './exercise-6/exercise-6.module';
+import {OrderedListComponent} from './exercise-7/ordered-list/ordered-list.component';
+import {Exercise7Module} from './exercise-7/exercise-7.module';
 
 const appRoutes: Routes = [
     {path: '', redirectTo: 'exercises', pathMatch: 'full'},
@@ -29,6 +31,7 @@ const appRoutes: Routes = [
     {path: 'exercise-4', component: LifecycleComponent},
     {path: 'exercise-5', component: ServicesShowcaseComponent},
     {path: 'exercise-6', component: UnorderedListComponent},
+    {path: 'exercise-7', component: OrderedListComponent},
     {path: 'exercise-8', component: DirectiveShowcaseComponent},
     {path: 'extra-1', component: ExtrasWrapperComponent}
 ];
@@ -47,8 +50,9 @@ const appRoutes: Routes = [
         Exercise4Module,
         Exercise5Module,
         Exercise6Module,
+        Exercise7Module,
         Exercise8Module,
-         Extra1Module,
+        Extra1Module,
         RouterModule.forRoot(
             appRoutes,
             {enableTracing: false} // <-- for debugging purposes only set to true
