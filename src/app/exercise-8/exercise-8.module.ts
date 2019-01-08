@@ -12,4 +12,4 @@ import { HighlightBackground3Directive } from './directive-showcase/directives/h
   declarations: [DirectiveShowcaseComponent, HighlightBackground1Directive, HighlightBackground2Directive, HighlightBackground3Directive],
   exports: [DirectiveShowcaseComponent]
 })
-export class Exercise10Module { }
+export class Exercise8Module { }

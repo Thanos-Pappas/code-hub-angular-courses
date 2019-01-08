@@ -1,0 +1,30 @@
+<div class="container-fluid p-4">
+    <div class="row">
+        <div class="col">
+            <h2>Usages of *ngFor</h2>
+            <hr>
+        </div>
+    </div>
+    <div class="row mt-5 ml-5">
+        <div class="col-sm-3 mr-3">
+            <h5>with *ngIf, first and last</h5>
+            <ul>
+                <li *ngFor="let element of myArray; let isFirst = first; let isLast = last">
+                    <div *ngIf="isFirst;">is First!</div>
+                    <div *ngIf="isLast;">is Last!</div>
+                    <div *ngIf="!isFirst && !isLast;">{{element}}</div>
+                </li>
+            </ul>
+        </div>
+        <div class="col-sm-3 mr-3">
+            <h5>with ngClass, even and odd</h5>
+            <ul>
+                <li *ngFor="let element of myArray; let isOdd = odd; let isEven = even">
+                    <div [ngClass]="{'text-success': isOdd, 'text-danger ': isEven}">
+                        {{element}}
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
