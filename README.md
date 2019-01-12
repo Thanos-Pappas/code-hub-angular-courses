@@ -95,6 +95,42 @@ https://restcountries.eu/rest/v2/
 2. Consume the service in a component and display the results in an
 inline template
 
+## Routing
+
+### exercise #12
+Create a navigation bar with two items:
+1. **Name**: “Component A”, **link**: /parenta
+a. It will display the content of **parenta** component
+2. **Name**: “Component B”, **link**: /parentb
+a. It will display the content of **parentb** component
+
+### exercise #13
+Enhance the menu bar you created just before with two more components:
+1. **Name**: “Child A”, **link**: /parenta/childa
+a. It will display the content of **childa** component on the nested
+router-outlet of **parenta** component
+2. **Name**: “Child B”, **link**: /parentb/childb
+a. It will display the content of **childb** component on the nested
+router-outlet of **parentb** component
+
+### exercise #14
+Create an unordered list of items. Each item will navigate to the
+component by giving as id the index of the array position.
+i.e. /path/3
+
+### exercise #15
+Enhance the menu bar you created just before with two more components:
+1. **Name**: “Child A”, **link**: /parenta/childa
+a. It will display the content of **childa** component on the nested router-outlet of **parenta**
+component
+2. **Name**: “Child B”, link: /parentb/childb
+a. It will display the content of **childb** component on the nested router-outlet of **parentb**
+component
+
+* Each Parent with its children component should be on a separate feature
+  module, having its own routing
+The destination component should log the id in the console
+
 ## Extras
 
 ### extra #1
