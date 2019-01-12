@@ -1,0 +1,9 @@
+<h3 class="text-primary">This is the "Parent A" Component. </h3>
+<ul class="list-unstyled">
+    <li *ngFor="let item of items; let i = index">
+        <a [routerLink]="['childa',i+1]" routerLinkActive="active" class="nav-link text-primary">{{item}}</a>
+    </li>
+</ul>
+<div class="m-5">
+    <router-outlet></router-outlet>
+</div>

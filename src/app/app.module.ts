@@ -23,6 +23,12 @@ import {OrderedListComponent} from './exercise-7/ordered-list/ordered-list.compo
 import {Exercise7Module} from './exercise-7/exercise-7.module';
 import {RoutingComponent} from './extras/routing/routing.component';
 import {ExtrasModule} from './extras/extras.module';
+import {NavigationBarComponent} from './exercise-12-13-14/navigation-bar/navigation-bar.component';
+import {Exercise12Module} from './exercise-12-13-14/exercise-12.module';
+import {ParentAComponent} from './exercise-12-13-14/parent-a/parent-a.component';
+import {ParentBComponent} from './exercise-12-13-14/parent-b/parent-b.component';
+import {ChildAComponent} from './exercise-12-13-14/parent-a/child-a/child-a.component';
+import {ChildBComponent} from './exercise-12-13-14/parent-b/child-b/child-b.component';
 
 const appRoutes: Routes = [
     {path: '', redirectTo: 'exercises', pathMatch: 'full'},
@@ -35,6 +41,15 @@ const appRoutes: Routes = [
     {path: 'exercise-6', component: UnorderedListComponent},
     {path: 'exercise-7', component: OrderedListComponent},
     {path: 'exercise-8', component: DirectiveShowcaseComponent},
+    {path: 'exercise-8', component: DirectiveShowcaseComponent},
+    {path: 'exercise-12-13-14', component: NavigationBarComponent, children: [
+            {path: 'parenta', component: ParentAComponent, children: [
+                    {path: 'childa/:id', component: ChildAComponent}
+                ]},
+            {path: 'parentb', component: ParentBComponent, children: [
+                    {path: 'childb/:id', component: ChildBComponent}
+                ]}
+        ]},
     {path: 'extras', component: RoutingComponent},
     {path: 'extras/extra-1', component: ExtrasWrapperComponent}
 ];
@@ -55,6 +70,7 @@ const appRoutes: Routes = [
         Exercise6Module,
         Exercise7Module,
         Exercise8Module,
+        Exercise12Module,
         ExtrasModule,
         Extra1Module,
         RouterModule.forRoot(

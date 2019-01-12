@@ -119,13 +119,7 @@ component by giving as id the index of the array position.
 i.e. /path/3
 
 ### exercise #15
-Enhance the menu bar you created just before with two more components:
-1. **Name**: “Child A”, **link**: /parenta/childa
-a. It will display the content of **childa** component on the nested router-outlet of **parenta**
-component
-2. **Name**: “Child B”, link: /parentb/childb
-a. It will display the content of **childb** component on the nested router-outlet of **parentb**
-component
+Extend exercise #13
 
 * Each Parent with its children component should be on a separate feature
   module, having its own routing
